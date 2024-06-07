@@ -1,0 +1,264 @@
+:root {
+    --Nutmeg: hsl(14, 45%, 36%);
+    --Dark-Raspberry: hsl(332, 51%, 32%);
+    --White: hsl(0, 0%, 100%);
+    --Rose-White: hsl(330, 100%, 98%);
+    --Eggshell: hsl(30, 54%, 90%);
+    --Light-Grey: hsl(30, 18%, 87%);
+    --Wenge-Brown: hsl(30, 10%, 34%);
+    --Dark-Charcoal: hsl(24, 5%, 18%);
+    --light-pink:hsl(0, 57%, 66%);
+    --light-pink2:hsl(0, 82%, 83%);
+    --color-1:hsl(0, 31%, 37%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+body {
+    background-color: var(--Eggshell);
+    font-family: 'outfit', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--Wenge-Brown);
+}
+
+h1,
+h2 {
+    font-family: 'Young Serif', 'Times New Roman', Times, serif;
+}
+
+hr {
+    color: var(--Light-Grey);
+    margin: 30px 0;
+}
+
+.container {
+    width: 65vw;
+    background-color: var(--White);
+    margin: 20vh auto;
+    padding: 40px;
+    border-radius: 30px;
+}
+
+
+nav {
+    width: 100vw;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--light-pink);
+    z-index: 1000;
+}
+
+.logo a {
+    color: var(--light-pink2);
+    text-decoration: none;
+    font-size: 28px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu li {
+    display: block;
+    margin: 0 30px;
+}
+
+.menu li:hover {
+    color: var(--color-1);
+    cursor: pointer;
+}
+
+
+
+nav+div {
+    margin-top: 70px;
+}
+
+
+.header{
+    width: 100vw;
+    height:100vh;
+    position: relative;
+}
+
+.header img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.header div{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+    color: var(--Eggshell);
+    text-align: center;
+    padding:200px 40px 40px 0 ;
+    background-color: rgba(16, 16, 16, 0.472)
+}
+
+.backward{
+    position: absolute;
+    bottom: 50px;
+    left: 150px;
+    color: white;
+    cursor: pointer;
+}
+
+.forward{
+    position: absolute;
+    bottom: 50px;
+    right: 150px;
+    color: white;
+    cursor: pointer;
+}
+
+.card {}
+
+.food-desc h1 {
+    font-size: 40px;
+    color: var(--Dark-Charcoal);
+    margin-top: 20px;
+}
+
+.food-desc p {
+    margin-top: 20px;
+}
+
+.food-img {
+    width: 55vw;
+    border-radius: 30px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.prep-time {
+    width: 99%;
+    background-color: var(--Rose-White);
+    padding: 20px 50px;
+    margin: 15px auto;
+    border-radius: 10px;
+}
+
+.prep-time h3 {
+    color: var(--Dark-Raspberry);
+    text-align: left;
+}
+
+.prep-time ul {
+    list-style-position: inside;
+    list-style: none;
+}
+
+ol {
+    list-style-position: inside;
+    color: var(--Nutmeg);
+    font-family: 'century gothic';
+}
+
+.normal {
+    color: var(--Wenge-Brown);
+    font-family: 'outfit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.prep-time ul li::before {
+    color: var(--Dark-Raspberry);
+    content: '\2022';
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 5px;
+    width: 1em;
+}
+
+.bold {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+h2 {
+    color: var(--Nutmeg);
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+li {
+    margin-top: 10px;
+}
+
+.ingrident ul {
+    list-style-position: inside;
+    list-style: none;
+}
+
+.ingrident ul li::before {
+    color: var(--Nutmeg);
+    content: '\2022';
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 5px;
+    width: 1em;
+}
+
+.food-img img {
+    width: 55vw;
+}
+
+.nutrition p {
+    margin: 10px 0;
+}
+
+.nutrition table {
+    width: 95%;
+}
+
+.nutrition table td {
+    padding: 20px;
+}
+
+@media screen and (max-width: 540px) {
+    .container {
+        position: relative;
+        width: 100vw;
+        margin: 0;
+        border-radius: 0;
+        padding-top: 0;
+        overflow: hidden;
+    }
+
+    .food-img {
+        width: 100vw;
+        height: 170px;
+        border-radius: 0;
+        overflow: hidden;
+        margin: 0;
+    }
+
+    .food-img img {
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+}
+
+
