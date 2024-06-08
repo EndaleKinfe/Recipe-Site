@@ -10,6 +10,8 @@
     --light-pink:hsl(0, 57%, 66%);
     --light-pink2:hsl(0, 82%, 83%);
     --color-1:hsl(0, 31%, 37%);
+    --Grayish-blue: hsl(220, 15%, 55%);
+    --Dark-blue: hsl(218, 44%, 22%);
 }
 
 * {
@@ -82,6 +84,11 @@ nav {
     cursor: pointer;
 }
 
+.menu a{
+    text-decoration: none;
+    color: var(--light-pink2);
+}
+
 
 
 nav+div {
@@ -91,7 +98,7 @@ nav+div {
 
 .header{
     width: 100vw;
-    height:100vh;
+    height:80vh;
     position: relative;
 }
 
@@ -115,28 +122,22 @@ nav+div {
     background-color: rgba(16, 16, 16, 0.472)
 }
 
-.backward{
+.header h1{
     position: absolute;
-    bottom: 50px;
-    left: 150px;
-    color: white;
-    cursor: pointer;
+    bottom: 45%;
+    left: 30%;
 }
 
-.forward{
-    position: absolute;
-    bottom: 50px;
-    right: 150px;
-    color: white;
-    cursor: pointer;
-}
 
-.card {}
+
+
+/* single recipe page */
 
 .food-desc h1 {
     font-size: 40px;
     color: var(--Dark-Charcoal);
     margin-top: 20px;
+    text-align: center;
 }
 
 .food-desc p {
@@ -145,9 +146,12 @@ nav+div {
 
 .food-img {
     width: 55vw;
+    height: 30vw;
     border-radius: 30px;
     overflow: hidden;
     margin: 0 auto;
+    object-fit: cover;
+    object-position: center;
 }
 
 .prep-time {
@@ -174,10 +178,7 @@ ol {
     font-family: 'century gothic';
 }
 
-.normal {
-    color: var(--Wenge-Brown);
-    font-family: 'outfit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+
 
 
 .prep-time ul li::before {
@@ -189,10 +190,6 @@ ol {
     width: 1em;
 }
 
-.bold {
-    font-weight: bold;
-    font-size: 15px;
-}
 
 h2 {
     color: var(--Nutmeg);
@@ -246,19 +243,210 @@ li {
 
     .food-img {
         width: 100vw;
-        height: 170px;
+        height: 5vh;
         border-radius: 0;
         overflow: hidden;
         margin: 0;
+        object-fit: cover;
+        object-position: center;
     }
 
     .food-img img {
         width: 100vw;
+        height: 25vh;
+        object-fit: cover;
+        object-position: center;
         position: absolute;
         top: 0;
         left: 0;
     }
 
+        .food-desc{
+            margin-top: 200px;
+        }
+
 }
 
 
+/* slider */
+
+.slideshow-container {
+    width: 100vw;
+    height: 80vh;
+    position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.mySlides img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 90px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 40%;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.459);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+
+/* recipe list */
+
+.recipe-list{
+    margin-top: 50px;
+}
+
+.recipe-list h2{
+    text-align: center;
+    font-size: 40px;
+}
+
+#list{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.card {
+    text-align: center;
+    width: 360px;
+    height: 500px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--White);
+    margin-top: 30px;
+}
+
+.card img {
+    width: 290px;
+    height: 350px;
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card h3 {
+    font-size: 1.2em;
+    color: var(--Dark-blue);
+    width: 260px;
+    margin: 20px auto;
+}
+
+.card p {
+    font-size: 0.8em;
+    color: var(--Grayish-blue);
+    width: 260px;
+    margin: 20px auto;
+}
+
+@media screen and (max-width: 530px) {
+    .card {
+        width: 300px;
+        height: 400px;
+    }
+
+    .card img {
+        width: 240px;
+        height: 265px;
+    }
+
+    .card h3 {
+        width: 250px;
+    }
+
+    .card p {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .card  {
+        width: 240px;
+        height: 290px;
+        box-sizing: border-box;
+    }
+
+    .card img {
+        width: 180px;
+        height: 235px;
+    }
+
+    .card h3 {
+        width: 200px;
+    }
+
+    .card p {
+        width: 200px;
+    }
+}
